@@ -15,13 +15,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/ingredientTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/zutatenListe"
-            tools:layout_editor_absoluteX="23dp"
-            tools:layout_editor_absoluteY="129dp" />
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-1dp" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/recipeTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/rezeptListe"
@@ -43,5 +45,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:maxImageSize="40dp"
         app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentRecipeView"
+        android:name="com.example.rezeptliste.fragment_recipe"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentIngredientView"
+        android:name="com.example.rezeptliste.fragment_ingredient"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/fragmentRecipeView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/fragmentRecipeView"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
