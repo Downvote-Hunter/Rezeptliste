@@ -54,7 +54,8 @@
         app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        tools:layout="@layout/fragment_recipe" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentIngredientView"
@@ -64,7 +65,8 @@
         app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        tools:layout="@layout/fragment_ingredient" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
